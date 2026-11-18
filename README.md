@@ -1,36 +1,44 @@
 # The World in One Day
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3130/)
-[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
-[![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
-[![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![make.fun](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117)
 
-A one-page newspaper front page that sums up Tuesday 17 November 2026 in
-sixteen real stories, drawn entirely in code with PIL.
+A one-page newspaper front page that sums up **Tuesday 17 November 2026** in a
+single image: 24 real stories from six continents.
 
-## What it shows
+Website: https://make.fun/bounty/news-image-20261117
 
-A classic broadsheet on light paper: a big date masthead, three illustrated
-lead stories (the Kerch Bridge span falling into the sea, a tanker burning
-in the Strait of Hormuz, and the Quad summit in Manila), four more stories
-below, eight briefs, a world map with numbered pins, a numbered index, and a
-markets strip along the foot of the page.
+## What is on the page
 
-## How it works
+- **Masthead** — "THE WORLD IN ONE DAY", dated Tuesday 17 November 2026.
+- **Stats strip** — six numbers from the day: 11,000+ Ebola cases in DR Congo,
+  $115.8bn Nvidia market value, Dow -849, 1.4M people in acute hunger in Gaza,
+  19 dead in the Siberian An-12 crash, Voyager 1 one light-day from Earth.
+- **Three illustrated lead stories** — the Kerch Bridge span crashing into the
+  sea, a tanker burning in the Strait of Hormuz, and the Quad leaders meeting
+  in Manila.
+- **Four secondary stories** — Nvidia's chief quits in a spy scandal, allies
+  press Israel to open Gaza aid crossings, Japan scrambles jets, Houthis
+  advance in Yemen.
+- **IN BRIEF** — 17 more stories, numbered 8–24.
+- **Dot-matrix world map** — land drawn as dots, with numbered pins at the
+  real places of the day's stories and a full 1–24 index.
+- **MARKETS strip** and a **DATE CHECK** footer: every story was verified as
+  17 November 2026 news.
 
-`draw.py` draws every element of the page with PIL and saves `entry.png`
-(1024×1024). `main.py` copies that image to the output directory as
-`entry.png`. The program uses only the Python standard library, makes no
-network calls, and writes the same bytes on every run.
+## How it is built
 
-## Run it
+`draw.py` draws the whole front page with Pillow (PIL) — no network, no
+randomness, no timestamps, so the output is byte-for-byte deterministic.
+`main.py` (standard library only) copies the rendered `entry.png` into
+`$MAKEFUN_OUTPUT_DIR` (default `/output`).
 
-```sh
-python3 draw.py   # regenerate entry.png (optional; one is included)
-python3 main.py   # writes entry.png to /output (or $MAKEFUN_OUTPUT_DIR)
+```bash
+python3 draw.py        # renders entry.png (1024x1024)
+python3 main.py        # copies entry.png to the output directory
 ```
 
 ## License
 
-MIT — see LICENSE.
+MIT — see `LICENSE`.
