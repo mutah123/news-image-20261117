@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Entry program for the make.fun news-image-20261117 competition.
+"""Entry point for the make.fun news-image-20261117 bounty (v3).
 
-Copies the pre-drawn entry.png (rendered by draw.py) into the output
-directory the grader provides. Standard library only. The image path is
-resolved relative to this file, never relative to the working directory,
-because the grader runs this program from a different working directory.
+Runs draw.py and writes entry.png to the output directory. Stdlib only.
+Resolves files relative to this script, never relative to the CWD, so the
+grader can run it from any working directory and get identical bytes.
+
+Output directory comes from MAKEFUN_OUTPUT_DIR, default /output.
 """
 import os
-import shutil
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 
+sys.path.insert(0, str(HERE))
 
-def main():
-    OUT.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(HERE / "entry.png", OUT / "entry.png")
-
+import draw  # noqa: E402
 
 if __name__ == "__main__":
-    main()
+    OUT.mkdir(parents=True, exist_ok=True)
+    img = draw.build()
+    img.save(OUT / "entry.png", optimize=True)
+    print("wrote", OUT / "entry.png")

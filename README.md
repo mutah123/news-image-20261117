@@ -1,44 +1,19 @@
-# The World in One Day
+# The World in One Day — v3
 
-[![make.fun](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117)
-[![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117)
-[![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117)
+A front-page image summing up the world's news of **Tuesday 17 November 2026** — 43 real stories from six continents, drawn as a newspaper front page: a giant one-line date, a six-number stats strip, three illustrated lead stories (the Kerch Bridge span collapse, the Gulf drone war, the Quad summit in Manila), ten illustrated secondary stories, a solid-continent world map with numbered pins, and one "Also on Tuesday 17 November" list. Every story on the page happened or was first reported on that day; disputed claims are marked as claims.
 
-A one-page newspaper front page that sums up **Tuesday 17 November 2026** in a
-single image: 24 real stories from six continents.
-
-Website: https://make.fun/bounty/news-image-20261117
-
-## What is on the page
-
-- **Masthead** — "THE WORLD IN ONE DAY", dated Tuesday 17 November 2026.
-- **Stats strip** — six numbers from the day: 11,000+ Ebola cases in DR Congo,
-  $115.8bn Nvidia market value, Dow -849, 1.4M people in acute hunger in Gaza,
-  19 dead in the Siberian An-12 crash, Voyager 1 one light-day from Earth.
-- **Three illustrated lead stories** — the Kerch Bridge span crashing into the
-  sea, a tanker burning in the Strait of Hormuz, and the Quad leaders meeting
-  in Manila.
-- **Four secondary stories** — Nvidia's chief quits in a spy scandal, allies
-  press Israel to open Gaza aid crossings, Japan scrambles jets, Houthis
-  advance in Yemen.
-- **IN BRIEF** — 17 more stories, numbered 8–24.
-- **Dot-matrix world map** — land drawn as dots, with numbered pins at the
-  real places of the day's stories and a full 1–24 index.
-- **MARKETS strip** and a **DATE CHECK** footer: every story was verified as
-  17 November 2026 news.
+![make.fun](https://make.fun/badge/news-image-20261117.svg)
+![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)
+![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)
 
 ## How it is built
 
-`draw.py` draws the whole front page with Pillow (PIL) — no network, no
-randomness, no timestamps, so the output is byte-for-byte deterministic.
-`main.py` (standard library only) copies the rendered `entry.png` into
-`$MAKEFUN_OUTPUT_DIR` (default `/output`).
+`draw.py` draws the whole 1024×1024 front page with Pillow (no network, no randomness, no timestamps — the same input always produces the same bytes). `main.py` (stdlib only) runs it and writes `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`).
 
-```bash
-python3 draw.py        # renders entry.png (1024x1024)
-python3 main.py        # copies entry.png to the output directory
-```
+## Stories
+
+43 in total: 3 leads + 10 secondaries + 30 in the "Also" list. All real Tuesday 17 November 2026 news — the Kerch Bridge, the Gulf, the Quad summit, Ebola in DR Congo, the measles-free status loss, Nvidia's $115.8bn quarter, COP31 in Antalya, Mongolia's president resigning, the Serbia student MP, Bangladesh garment workers, the An-12 crash, Gaza crossings, Japan scrambling jets, and 30 more, each tagged by region and field.
 
 ## License
 
-MIT — see `LICENSE`.
+MIT. See LICENSE.
