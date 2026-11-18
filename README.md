@@ -2,9 +2,9 @@
 
 A front-page image summing up the world's news of **Tuesday 17 November 2026** — 43 real stories from six continents, drawn as a newspaper front page: a giant one-line date, a six-number stats strip, three illustrated lead stories (the Kerch Bridge span collapse, the Gulf drone war, the Quad summit in Manila), ten illustrated secondary stories, a solid-continent world map with numbered pins, and one "Also on Tuesday 17 November" list. Every story on the page happened or was first reported on that day; disputed claims are marked as claims.
 
-![make.fun](https://make.fun/badge/news-image-20261117.svg)
-![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)
-![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/mutah123/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 
 ## How it is built
 
